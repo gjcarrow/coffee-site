@@ -12,7 +12,14 @@ import { useStaticQuery, graphql } from "gatsby"
 import "./bulma.min.css"
 import "./layout.css"
 
-const Layout = ({children})=> <>{ children }</>
+import Navbar from "./globals/Navbar";
+
+const Layout = ({children})=> (
+  <>
+    <Navbar />
+    { children }
+  </>
+  )
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
