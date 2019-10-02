@@ -11,6 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import "./bulma.min.css"
 import "./layout.css"
+import "./custom.css"
 
 import Navbar from "./globals/Navbar";
 

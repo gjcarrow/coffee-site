@@ -31,7 +31,7 @@ class Navbar extends Component {
 
     
     return (
-      <nav className="navbar">
+      <nav className="navbar text-capitalize">
         <div className="navbar-brand">
           <Link className="navbar-item" to="/">
             <img className="navbar-item-logo" src={logo} width="112" height="28" />
@@ -45,47 +45,24 @@ class Navbar extends Component {
           </a>
         </div>
 
-        <div id="navbarBasicExample" className={this.state.navbarOpen?`navbar-menu is-active`:`navbar-menu`}>
+        <div className={this.state.navbarOpen?`navbar-menu is-active`:`navbar-menu`}>
           <div className="navbar-start">
-            {/* <ul> */}
-              { this.state.links.map((link)=>{
-                return (
-              <div key={link.id}>
-                <Link to={link.path} className="navbar-item">
-                  {link.text}
-                </Link>
-              </div>
-
+            {this.state.links.map((link) => {
+              return (
+                <div key={link.id}>
+                  <Link to={link.path} className="navbar-item">
+                    {link.text}
+                  </Link>
+                </div>
               )
-              })}
-            {/* </ul> */}
-
+            })}
           </div>
-
           <div className="navbar-end">
-            <div className="navbar-item has-dropdown is-hoverable">
-              <a className="navbar-link">
-                Cart
-              </a>
-
-              <div className="navbar-dropdown">
-                <a className="navbar-item">
-                  Item 1
-              </a>
-                <a className="navbar-item">
-                  Item 2
-              </a>
-                <hr className="navbar-divider" />
-                  <a className="navbar-item">
-                    Report an issue
-              </a> 
-                </div> {/* navbar-dropdown */}
-              </div> {/* has-dropdown is-hoverable  */}
-            </div> {/* navbar-end  */}
-
-            
+            <a className="navbar-item">
+              <FaCartArrowDown className="cart-icon" />
+            </a>
           </div>
-        
+          </div>
       </nav>
     );
   }

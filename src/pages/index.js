@@ -10,7 +10,7 @@ import { FaRebel, FaBuysellads } from "react-icons/fa";
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi Wankers</h1>
+    <h1 className="has-text-black-ter">Hi Wankers</h1>
     {/* <Link to="/page-2/">Go to page 2</Link> */}
     <FaBuysellads />
     <FaRebel />
