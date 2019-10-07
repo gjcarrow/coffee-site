@@ -1,20 +1,36 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import BackgroundSection from "../components/globals/BackgroundSection.js"
 
 // import { FaMagic } from 'react-icons/fa'
-import { FaRebel, FaBuysellads } from "react-icons/fa";
 
-const IndexPage = () => (
+const IndexPage = ({data}) => (
   <Layout>
     <SEO title="Home" />
-    <h1 className="has-text-black-ter">Hi Wankers</h1>
-    {/* <Link to="/page-2/">Go to page 2</Link> */}
-    <FaBuysellads />
-    <FaRebel />
+    <BackgroundSection
+      img={data.img.childImageSharp.fluid}
+      title="Joe Regular"
+      styleClass="default-background"
+      ></BackgroundSection>
   </Layout>
 )
+
+/* src */
+
+
+const query = graphql`
+{
+  img: file(relativePath: {eq: "default-background.jpeg"}) {
+    childImageSharp {
+      fluid {
+        ...GatsbyImageSharpFluid_tracedSVG
+      }
+    }
+  }
+}
+`
 
 export default IndexPage

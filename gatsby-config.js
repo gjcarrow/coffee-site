@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Marks Coffee`,
+    title: `Joes Coffee`,
     description: `Enjoy the greatest cup of coffee you have ever tasted in your life`,
     author: `@gjcarrow`,
   },
