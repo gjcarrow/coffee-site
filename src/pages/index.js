@@ -5,8 +5,6 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BackgroundSection from "../components/globals/BackgroundSection.js"
 
-// import { FaMagic } from 'react-icons/fa'
-
 const IndexPage = ({data}) => (
   <Layout>
     <SEO title="Home" />
@@ -14,14 +12,15 @@ const IndexPage = ({data}) => (
       img={data.img.childImageSharp.fluid}
       title="Joe Regular"
       styleClass="default-background"
-      ></BackgroundSection>
+      >
+      </BackgroundSection>
   </Layout>
 )
 
 /* src */
 
 
-const query = graphql`
+export const query = graphql`
 {
   img: file(relativePath: {eq: "default-background.jpeg"}) {
     childImageSharp {

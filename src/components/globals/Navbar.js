@@ -34,7 +34,7 @@ class Navbar extends Component {
       <nav className="navbar text-capitalize">
         <div className="navbar-brand">
           <Link className="navbar-item" to="/">
-            <img className="navbar-item-logo" src={logo} width="112" height="28" />
+            <img className="navbar-item-logo" src={logo} width="112" height="28" alt="coffee cup logo" />
           </Link>
 
           <a role="button" onClick={this.navbarHandler} className="navbar-toggler navbar-burger burger" aria-label="menu" aria-expanded="false"
