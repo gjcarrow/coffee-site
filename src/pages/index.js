@@ -10,9 +10,12 @@ const IndexPage = ({data}) => (
     <SEO title="Home" />
     <BackgroundSection
       img={data.img.childImageSharp.fluid}
-      title="Joe Regular"
+      title="Regular Joe's"
       styleClass="default-background"
       >
+        <h2 class="has-text-white is-capitalized has-text-centered">
+          This is the subheading should be children
+        </h2>
       </BackgroundSection>
   </Layout>
 )

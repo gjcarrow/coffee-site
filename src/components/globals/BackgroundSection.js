@@ -12,7 +12,7 @@ export default function BackgroundSection ({
       className={ styleClass } 
       fluid={ img }
       >
-        <h1>
+        <h1 className="has-text-white is-uppercase has-text-centered">
           {title}
         </h1>
         {children}

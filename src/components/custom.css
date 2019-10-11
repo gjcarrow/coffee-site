@@ -1,5 +1,5 @@
 :root {
-  --mainBrown: #2d1ef1;
+  --mainBrown: #2d1e1f;
   --mainYellow: #ff9e09;
   --mainGrey: #ece8dc;
   --mainWhite: #fff;
@@ -34,15 +34,23 @@ h1, h2, h3, h4, h5, h6 {
 .text-capitalize {
   text-transform: capitalize;
 }
-.navbar-start > div {
+
+.navbar-start>div {
   display: flex;
 }
+
 .default-background {
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  background:linear-gradient(rgba(255,158,9,.5), rgba(255,158,9,.5));
+  background: linear-gradient(rgba(255, 158, 9, .5), rgba(255, 158, 9, .5));
   background-position: center;
   background-size: cover;
+  opacity: .5 !important;
+}
+
+.mock-border {
+  border: 2px dotted red;
 }
