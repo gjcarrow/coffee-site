@@ -13,7 +13,7 @@ const IndexPage = ({data}) => (
       title="Regular Joe's"
       styleClass="default-background"
       >
-        <h2 class="has-text-white is-capitalized has-text-centered">
+        <h2 className="has-text-black is-capitalized has-text-centered">
           This is the subheading should be children
         </h2>
       </BackgroundSection>
