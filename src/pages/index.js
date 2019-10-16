@@ -4,6 +4,8 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BackgroundSection from "../components/globals/BackgroundSection.js"
+import Footer from "../components/globals/Footer.js"
+import Info from "../components/Home/Info";
 
 const IndexPage = ({data}) => (
   <Layout>
@@ -12,11 +14,12 @@ const IndexPage = ({data}) => (
       img={data.img.childImageSharp.fluid}
       title="Regular Joe's"
       styleClass="default-background"
-      >
-        <h2 className="has-text-black is-capitalized has-text-centered">
-          This is the subheading should be children
-        </h2>
-      </BackgroundSection>
+      />
+      {/* You can also put children here of the backgroundSection component if you need to.
+          You would just need to be sure to change it from a self-closing tag and put your children in there.
+       */}
+      <Info />
+      <Footer />
   </Layout>
 )
 

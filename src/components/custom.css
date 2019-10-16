@@ -39,7 +39,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
 }
 
-.default-background {
+.default-background, .about-background {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -51,6 +51,22 @@ h1, h2, h3, h4, h5, h6 {
   opacity: .5 !important;
 }
 
-.mock-border {
-  border: 2px dotted red;
+.about-background {
+  min-height: 60vh;
+}
+
+.button.is-yellow {
+  color: var(--mainYellow);
+  background-color: var(--mainWhite);
+  border-color: var(--mainYellow);
+}
+
+.button.is-yellow:hover {
+  background: var(--mainYellow);
+  color: var(--mainBrown);
+}
+
+footer.footer {
+  background-color: var(--mainDark);
+  color: var(--mainWhite);
 }
